@@ -1,0 +1,35 @@
+{
+  "name": "pet.js",
+  "version": "1.0.0",
+  "description": "A small test-purpose API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/half-shell/pet.js.git"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "pet.js",
+    "petjs",
+    "half-shell"
+  ],
+  "author": "half-shell",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/half-shell/pet.js/issues"
+  },
+  "homepage": "https://github.com/half-shell/pet.js#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "passport-http-bearer": "^1.0.1"
+  },
+  "devDependencies": {
+    "supertest": "^1.2.0"
+  }
+}
