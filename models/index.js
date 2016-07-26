@@ -2,6 +2,7 @@ var sequelize = require('./sequelize');
 
 var Pet = require('./Pet');
 var Post = require('./Post');
+var Comment = require('./comment');
 
 // Database testing
 sequelize.validate().then(function(err){
@@ -24,5 +25,6 @@ sequelize.sync();
 module.exports = {
     sequelize: sequelize,
     Pet: Pet,
-    Post: Post
+    Post: Post,
+    Comment: Comment
 };
