@@ -1,4 +1,6 @@
-module.exports = function(Sequelize) {
+var Sequelize = require('sequelize');
+
+module.exports = {
     id: {
             type: Sequelize.BIGINT,
             primaryKey: true,
