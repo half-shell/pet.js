@@ -1,8 +1,8 @@
 var sequelize = require('./sequelize');
 
-var Pet = require('./Pet');
-var Post = require('./Post');
-var Comment = require('./comment');
+var Pet = require('./Pet')(Sequelize);
+var Post = require('./Post')(Sequelize);
+var Comment = require('./Comment')(Sequelize);
 
 // Database testing
 sequelize.validate().then(function(err){
