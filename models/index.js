@@ -3,6 +3,7 @@ var sequelize = require('./sequelize');
 var Pet = require('./Pet')(Sequelize);
 var Post = require('./Post')(Sequelize);
 var Comment = require('./Comment')(Sequelize);
+var User = require('./User')(Sequelize);
 
 // Database testing
 sequelize.validate().then(function(err){
@@ -16,6 +17,7 @@ sequelize.validate().then(function(err){
 // Relations
 Pet.hasMany(Post);
 Pet.hasMany(Pet);
+User.hasMany(Pet);
 
 // Syncing
 console.info("Syncing database");
@@ -26,5 +28,6 @@ module.exports = {
     sequelize: sequelize,
     Pet: Pet,
     Post: Post,
-    Comment: Comment
+    Comment: Comment,
+    User: User
 };
