@@ -2,6 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var DEFAULT_PORT = '3000';
 
+var models = require('./models');
+
 
 var api = express();
 api.use(bodyParser.urlencoded({extended: true}));
