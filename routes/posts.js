@@ -25,7 +25,7 @@ module.exports = function(api){
     })
 
     .get('/:id/comments', function(req, res, next){
-        Post.findById()
+        Post.findById(req.params.id)
         .then(function(post){
             post.getComments()
             .then(function(comments){
@@ -43,7 +43,8 @@ module.exports = function(api){
     .post('/', function(req, res, next){
         Post.create({
             message: req.body.message,
-            date: req.body.date
+            date: req.body.date,
+            petId: req.body.petId
         })
         .then(function(post){
             res.send({success: "Post added successfuly", post})

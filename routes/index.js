@@ -9,5 +9,5 @@ module.exports = function(api){
     api.use('/api/pets', pets);
 
     var comments = require('./comments')(api);
-    api.use('/api/comments')(api);
+    api.use('/api/comments', comments);
 }

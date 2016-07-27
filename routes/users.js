@@ -25,7 +25,7 @@ module.exports = function(api){
     })
 
     .get('/:id/pets', function(req, res, next){
-        User.findById()
+        User.findById(req.params.id)
         .then(function(user){
             user.getPets()
             .then(function(pets){
