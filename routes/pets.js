@@ -22,8 +22,8 @@ module.exports = function(api){
 	  .post('/', function(req, res, next){
         Pet.create({
             name: req.body.name,
-            type: req.body.type
-			born: req.body.born
+            type: req.body.type,
+            born: req.body.born
         })
         .then(function(pet){
             res.send({success: "Pet added successfuly", pet})
