@@ -1,9 +1,9 @@
 var sequelize = require('./sequelize');
 
-var Pet = require('./Pet')(Sequelize);
-var Post = require('./Post')(Sequelize);
-var Comment = require('./Comment')(Sequelize);
-var User = require('./User')(Sequelize);
+var Pet = require('./Pet');
+var Post = require('./Post');
+var Comment = require('./Comment');
+var User = require('./User');
 
 // Database testing
 sequelize.validate().then(function(err){
@@ -16,8 +16,11 @@ sequelize.validate().then(function(err){
 
 // Relations
 Pet.hasMany(Post);
-Pet.hasMany(Pet);
+
+Pet.belongsTo(User);
 User.hasMany(Pet);
+
+Post.hasMany(Comment);
 
 // Syncing
 console.info("Syncing database");

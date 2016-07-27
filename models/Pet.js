@@ -1,6 +1,7 @@
 var Sequelize = require('sequelize');
+var sequelize = require('./sequelize');
 
-module.exports = {
+module.exports = sequelize.define('pet', {
     id: {
             type: Sequelize.BIGINT,
             primaryKey: true,
@@ -15,4 +16,4 @@ module.exports = {
     born : {
             type: Sequelize.DATE
     }
-};
+});
